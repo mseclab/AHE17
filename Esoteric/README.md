@@ -111,6 +111,8 @@ public static void main(String[] args) {
 ```
 
 ```bash
+$  mvn -N io.takari:maven:wrapper
+[...]
 $ ./mvnw clean package
 [INFO] Scanning for projects...
 [...]

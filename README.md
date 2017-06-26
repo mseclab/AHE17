@@ -1,6 +1,6 @@
 # AHE17 : Android Hacking Events 2017
 TeamSIK organized Android Hacking Events (CTF) [Site](https://team-sik.org/ahe17-overview/)
-All the challenges are downloaded from official Google Drive [Link](https://drive.google.com/drive/folders/0B2XIcd5M5qKubUNIVlUxUFhwYWs)
+All the challenges are downloaded from official [Link](https://team-sik.org/ahe17-challenges/)
 
 **Qualification:**
  * [Qualification]
@@ -9,7 +9,7 @@ All the challenges are downloaded from official Google Drive [Link](https://driv
  * [AES-Decrypt](AES-Decrypt)
  * [Flag-Validator](Flag-Validator)
  * [WhyShouldPay]
- * [dotNetChallenge]
+ * [Token-Generator](Token-Generator)
  * [Flying-Dutchman-app]
  * [YouCanHideButYouCannotRun](YouCanHideButYouCannotRun)
  * [Esoteric](Esoteric)
