@@ -7,7 +7,7 @@ All the challenges are downloaded from official [Link](https://team-sik.org/ahe1
 
 **Challenge:**
  * [AES-Decrypt](AES-Decrypt)
- * [Flag-Validator](Flag-Validator)
+ * [Flag-Validator](FlagValidator)
  * [WhyShouldPay]
  * [Token-Generator](Token-Generator)
  * [Flying-Dutchman-app]
