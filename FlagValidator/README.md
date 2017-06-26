@@ -1,7 +1,11 @@
 # FlagValidator - WriteUp
+
 **Type**: Reversing
+
 **Points**: 150
+
 **Decription**: *If you enter a flag in the app it will validate if it is the correct flag. To find the correct flag, which the validator will accept, just reverse the app. If you find the correct flag, please put the flag for submission into AHE17{THEFLAG} .*
+
 
 ## Write-Up
 FlagValidator it's an android reversing challange in order to obtain the flag we were tasked to insert a flag in the format of (***XXX-XXX-XXX-XXX***).
@@ -24,14 +28,21 @@ Let's start by looking at **org.team_sik.flagvalidator.a.a.b.a.a** and try to un
 4) Compare with cHVtcjRX
 
 This is pretty easy, in order to obtain the first part we can simply do the following
-```python -c "import base64; print base64.b64decode('cHVtcjRX')[::-1]"```
+```python
+python -c "import base64; print base64.b64decode('cHVtcjRX')[::-1]"
+```
 The result was **W4rmup**
 ![start](images/parte1_1.png)
+
 ![start](images/parte1_2.png)
+
 ### Part 2
 For the second part I looked at the method **org.team_sik.flagvalidator.a.a.b.a.b**, this method perform some calcuation with an array called **a** (the same calculation used in part 2), then the result is compared with our string, below a screenshot of the method:
-![start](images/parte2_1.png)
+
+![start](images/part2_1.png)
+
 Looking at the logic I made a small python script which simulate the execution:
+
 ```python
 l = [-1602723372, 811074983, -1602723401, 811075023, -949198329, 1053776347, -1602723400, 811074964, -949198243, 1053776336, -1602723353, -949198285, 1053776311]
 l = [x % 256 for x in l]
@@ -48,7 +59,9 @@ while i < len(l) -2:
 print tmp
 ```
 The result from the execution was **ch4ll3ng3**
+
 ### Part 3
+
 The third part was obtained from reflection and a native library , first the application load the MainActivity class using reflection then try to compare a field called TOKEN2 with our string as show from the screenshots.
 ![start](images/parte3_1.png)
 ![start](images/parte3_2.png)
@@ -68,6 +81,7 @@ Java.perform(function() {
 });
 ```
 ![start](images/part3_3.png)
+
 ### Part 4
 Part 4 was the easiest , it simply use the method **org.team_sik.flagvalidator.a.a.b.a.d** to compare the MD5 hash of our string with **af246d4dacd2f683ff850dcfe465562f** , a quick search on google show that this is the MD5 for the plaintext **continue1**
 
